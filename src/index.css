@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --color-asphalt: #1a1c21;
+  --color-lane: #f2efe9;
+  --color-signal: #ff6a13;
+}
+
+html { background: var(--color-asphalt); }
+body { font-family: var(--font-body); color: var(--color-lane); overflow-x: hidden; }
+
+/* Road lane markings: a tall repeating gradient that is moved with transform only */
+.road-dashes {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(242 239 233 / 0.55) 0 56px,
+    transparent 56px 120px
+  );
+}
